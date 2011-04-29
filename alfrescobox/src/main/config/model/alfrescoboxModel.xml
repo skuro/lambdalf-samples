@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="sk:alfrescoboxModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<description>Content Model for AlfrescoBox</description>
+	<author>Carlo Sciolla</author>
+	<version>1.0</version>
+
+	<imports>
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+	</imports>
+
+	<namespaces>
+		<namespace uri="http://www.skuro.tk/model/alfrescobox/1.0" prefix="abx"/>
+	</namespaces>
+	
+	<aspects>
+		<aspect name="abx:downloadable">
+			<properties>
+				<property name="abx:ticket">
+					<type>d:text</type>
+				</property>
+			</properties>
+		</aspect>
+	</aspects>
+</model>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>it.sk.alfresco.samples</groupId>
+		<artifactId>lambdalf-samples-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>alfresco-sandbox</artifactId>
+	<packaging>war</packaging>
+
+	<name>Alfresco with a Clojure taste -- Sandbox</name>
+	<description>Sandbox instance of an Alfresco repository where to test Clojure integration</description>
+
+	<properties>
+		<alfresco.configuration.properties>dev</alfresco.configuration.properties>
+	</properties>
+
+
+	<dependencies>
+
+		<!-- Alfresco -->
+		<dependency>
+			<groupId>org.alfresco</groupId>
+			<artifactId>alfresco</artifactId>
+			<version>${alfresco.version}</version>
+			<classifier>${alfresco.classifier}</classifier>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.alfresco</groupId>
+			<artifactId>alfresco-repository</artifactId>
+			<version>${alfresco.version}</version>
+			<classifier>${alfresco.classifier}</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>it.sk.alfresco</groupId>
+			<artifactId>lambdalf</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>amp</type>
+		</dependency>
+		<dependency>
+			<groupId>it.sk.alfresco.samples</groupId>
+			<artifactId>alfrescobox</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>amp</type>
+		</dependency>
+
+		<!-- test scope -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>alfresco</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<overlays>
+						<overlay>
+							<groupId>org.alfresco</groupId>
+							<artifactId>alfresco</artifactId>
+							<classifier>${alfresco.classifier}</classifier>
+							<excludes>
+								<!-- Neither test frameworks nor JDBC drivers should be in the deployable. -->
+								<exclude>WEB-INF/lib/jtds-*.jar</exclude>
+								<exclude>WEB-INF/lib/junit-*.jar</exclude>
+								<exclude>WEB-INF/lib/mockito-all-*.jar</exclude>
+								<exclude>WEB-INF/lib/postgresql-*.jdbc*.jar</exclude>
+								<exclude>WEB-INF/lib/shale-test-*.jar</exclude>
+								<!-- and skip the sample configuration file too. -->
+								<exclude>WEB-INF/classes/alfresco-global.properties.sample</exclude>
+								<!-- ditto with JBoss Portlet specific configuration -->
+								<exclude>WEB-INF/jboss-portlet.xml</exclude>
+							</excludes>
+						</overlay>
+					</overlays>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>development</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/properties/${alfresco.configuration.properties}</directory>
+						<includes>
+							<include>*.properties</include>
+						</includes>
+						<targetPath>${project.build.outputDirectory}</targetPath>
+					</resource>
+					<resource>
+						<directory>src/main/properties/</directory>
+						<includes>
+							<include>jetty-env.xml</include>
+						</includes>
+						<targetPath>${project.build.directory}/${build.finalName}/WEB-INF</targetPath>
+						<filtering>true</filtering>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<targetPath>${project.build.outputDirectory}</targetPath>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.mortbay.jetty</groupId>
+						<artifactId>maven-jetty-plugin</artifactId>
+						<configuration>
+							<contextPath>${project.build.finalName}</contextPath>
+							<scanIntervalSeconds>10</scanIntervalSeconds>
+							<webDefaultXml>${project.parent.basedir}/webdefault.xml</webDefaultXml>
+							<connectors>
+								<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+									<port>8080</port>
+									<maxIdleTime>60000</maxIdleTime>
+								</connector>
+							</connectors>
+							<stopPort>9966</stopPort>
+							<stopKey>stop</stopKey>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>mysql</groupId>
+								<artifactId>mysql-connector-java</artifactId>
+								<version>5.1.14</version>
+								<type>jar</type>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
