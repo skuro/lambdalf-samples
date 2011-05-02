@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view:view xmlns:view="http://www.alfresco.org/view/repository/1.0">
+  <view:metadata>
+    <view:exportBy>admin</view:exportBy>
+    <view:exportDate>2011-05-02T11:23:49.415+02:00</view:exportDate>
+    <view:exporterVersion>3.4.0 (168)</view:exporterVersion>
+    <view:exportOf>/app:company_home/app:dictionary/cm:webscripts/cm:it</view:exportOf>
+  </view:metadata>
+  <cm:folder xmlns="" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rn="http://www.alfresco.org/model/rendition/1.0" xmlns:sys="http://www.alfresco.org/model/system/1.0" xmlns:lnk="http://www.alfresco.org/model/linksmodel/1.0" xmlns:gd="http://www.alfresco.org/model/googledocs/1.0" xmlns:ver="http://www.alfresco.org/model/versionstore/1.0" xmlns:cmiscustom="http://www.alfresco.org/model/cmis/custom" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:emailserver="http://www.alfresco.org/model/emailserver/1.0" xmlns:fm="http://www.alfresco.org/model/forum/1.0" xmlns:ia="http://www.alfresco.org/model/calendar" xmlns:abx="http://www.skuro.tk/model/alfrescobox/1.0" xmlns:rule="http://www.alfresco.org/model/rule/1.0" xmlns:wcm="http://www.alfresco.org/model/wcmmodel/1.0" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:dl="http://www.alfresco.org/model/datalist/1.0" xmlns:st="http://www.alfresco.org/model/site/1.0" xmlns:usr="http://www.alfresco.org/model/user/1.0" xmlns:exif="http://www.alfresco.org/model/exif/1.0" xmlns:app="http://www.alfresco.org/model/application/1.0" xmlns:module="http://www.alfresco.org/system/modules/1.0" xmlns:d="http://www.alfresco.org/model/dictionary/1.0" xmlns:blg="http://www.alfresco.org/model/blogintegration/1.0" xmlns:alf="http://www.alfresco.org" xmlns:cmis="http://www.alfresco.org/model/cmis/1.0/cs01" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:wca="http://www.alfresco.org/model/wcmappmodel/1.0" xmlns:bpm="http://www.alfresco.org/model/bpm/1.0" xmlns:inwf="http://www.alfresco.org/model/workflow/invite/nominated/1.0" xmlns:imap="http://www.alfresco.org/model/imap/1.0" xmlns:cm="http://www.alfresco.org/model/content/1.0" xmlns:reg="http://www.alfresco.org/system/registry/1.0" xmlns:ver2="http://www.alfresco.org/model/versionstore/2.0" xmlns:stcp="http://www.alfresco.org/model/sitecustomproperty/1.0" xmlns:wcmwf="http://www.alfresco.org/model/wcmworkflow/1.0" xmlns:view="http://www.alfresco.org/view/repository/1.0" xmlns:imwf="http://www.alfresco.org/model/workflow/invite/moderated/1.0" xmlns:act="http://www.alfresco.org/model/action/1.0" xmlns:wf="http://www.alfresco.org/model/workflow/1.0" xmlns:trx="http://www.alfresco.org/model/transfer/1.0" view:childName="cm:it">
+    <view:aspects>
+      <cm:auditable></cm:auditable>
+      <app:uifacets></app:uifacets>
+      <sys:referenceable></sys:referenceable>
+      <cm:titled></cm:titled>
+    </view:aspects>
+    <view:acl></view:acl>
+    <view:properties>
+      <app:icon>space-icon-default</app:icon>
+      <cm:name>it</cm:name>
+      <sys:node-dbid>555</sys:node-dbid>
+      <sys:store-identifier>SpacesStore</sys:store-identifier>
+      <cm:title>
+        <view:mlvalue view:locale="en_US"></view:mlvalue>
+      </cm:title>
+      <cm:modified>2011-05-02T11:22:00.320+02:00</cm:modified>
+      <sys:node-uuid>47643de9-89e9-4fdc-9929-ef0edad6fe89</sys:node-uuid>
+      <cm:created>2011-05-02T11:22:00.320+02:00</cm:created>
+      <sys:store-protocol>workspace</sys:store-protocol>
+      <cm:creator>admin</cm:creator>
+      <cm:description>
+        <view:mlvalue view:locale="en_US"></view:mlvalue>
+      </cm:description>
+      <cm:modifier>admin</cm:modifier>
+    </view:properties>
+    <view:associations>
+      <cm:contains>
+        <cm:folder view:childName="cm:sk">
+          <view:aspects>
+            <cm:auditable></cm:auditable>
+            <app:uifacets></app:uifacets>
+            <sys:referenceable></sys:referenceable>
+            <cm:titled></cm:titled>
+          </view:aspects>
+          <view:acl></view:acl>
+          <view:properties>
+            <app:icon>space-icon-default</app:icon>
+            <cm:name>sk</cm:name>
+            <sys:node-dbid>556</sys:node-dbid>
+            <sys:store-identifier>SpacesStore</sys:store-identifier>
+            <cm:title>
+              <view:mlvalue view:locale="en_US"></view:mlvalue>
+            </cm:title>
+            <cm:modified>2011-05-02T11:22:08.802+02:00</cm:modified>
+            <sys:node-uuid>9e9b1f89-c4d7-40ea-abe3-05d08f09091b</sys:node-uuid>
+            <cm:created>2011-05-02T11:22:08.802+02:00</cm:created>
+            <sys:store-protocol>workspace</sys:store-protocol>
+            <cm:creator>admin</cm:creator>
+            <cm:description>
+              <view:mlvalue view:locale="en_US"></view:mlvalue>
+            </cm:description>
+            <cm:modifier>admin</cm:modifier>
+          </view:properties>
+          <view:associations>
+            <cm:contains>
+              <cm:folder view:childName="cm:alfrescobox">
+                <view:aspects>
+                  <cm:auditable></cm:auditable>
+                  <app:uifacets></app:uifacets>
+                  <sys:referenceable></sys:referenceable>
+                  <cm:titled></cm:titled>
+                </view:aspects>
+                <view:acl></view:acl>
+                <view:properties>
+                  <app:icon>space-icon-default</app:icon>
+                  <cm:name>alfrescobox</cm:name>
+                  <sys:node-dbid>557</sys:node-dbid>
+                  <sys:store-identifier>SpacesStore</sys:store-identifier>
+                  <cm:title>
+                    <view:mlvalue view:locale="en_US"></view:mlvalue>
+                  </cm:title>
+                  <cm:modified>2011-05-02T11:22:16.331+02:00</cm:modified>
+                  <sys:node-uuid>a95558f0-3ced-417d-8b4a-d22bd2634c54</sys:node-uuid>
+                  <cm:created>2011-05-02T11:22:16.331+02:00</cm:created>
+                  <sys:store-protocol>workspace</sys:store-protocol>
+                  <cm:creator>admin</cm:creator>
+                  <cm:description>
+                    <view:mlvalue view:locale="en_US"></view:mlvalue>
+                  </cm:description>
+                  <cm:modifier>admin</cm:modifier>
+                </view:properties>
+                <view:associations>
+                  <cm:contains>
+                    <cm:content view:childName="cm:alfrescobox.get.clj">
+                      <view:aspects>
+                        <cm:auditable></cm:auditable>
+                        <sys:referenceable></sys:referenceable>
+                        <cm:titled></cm:titled>
+                        <cm:author></cm:author>
+                        <app:inlineeditable></app:inlineeditable>
+                      </view:aspects>
+                      <view:acl></view:acl>
+                      <view:properties>
+                        <cm:name>alfrescobox.get.clj</cm:name>
+                        <sys:node-dbid>558</sys:node-dbid>
+                        <sys:store-identifier>SpacesStore</sys:store-identifier>
+                        <cm:content>contentUrl=alfrescobox/content0.txt|mimetype=text/plain|size=391|encoding=UTF-8|locale=en_US_</cm:content>
+                        <cm:title>
+                          <view:mlvalue view:locale="en_US">alfrescobox.get.clj</view:mlvalue>
+                        </cm:title>
+                        <cm:modified>2011-05-02T11:23:04.476+02:00</cm:modified>
+                        <cm:author>
+                          <view:value view:isNull="true"></view:value>
+                        </cm:author>
+                        <sys:node-uuid>5ba22bcd-cdde-45dd-b2db-93e1e19de595</sys:node-uuid>
+                        <app:editInline>true</app:editInline>
+                        <cm:created>2011-05-02T11:23:04.476+02:00</cm:created>
+                        <sys:store-protocol>workspace</sys:store-protocol>
+                        <cm:description>
+                          <view:value view:isNull="true"></view:value>
+                        </cm:description>
+                        <cm:creator>admin</cm:creator>
+                        <cm:modifier>admin</cm:modifier>
+                      </view:properties>
+                    </cm:content>
+                    <cm:content view:childName="cm:alfrescobox.get.desc.xml">
+                      <view:aspects>
+                        <cm:auditable></cm:auditable>
+                        <sys:referenceable></sys:referenceable>
+                        <cm:titled></cm:titled>
+                        <cm:author></cm:author>
+                        <app:inlineeditable></app:inlineeditable>
+                      </view:aspects>
+                      <view:acl></view:acl>
+                      <view:properties>
+                        <cm:name>alfrescobox.get.desc.xml</cm:name>
+                        <sys:node-dbid>559</sys:node-dbid>
+                        <sys:store-identifier>SpacesStore</sys:store-identifier>
+                        <cm:content>contentUrl=alfrescobox/content1.xml|mimetype=text/xml|size=235|encoding=ISO-8859-1|locale=en_US_</cm:content>
+                        <cm:title>
+                          <view:mlvalue view:locale="en_US">alfrescobox.get.desc.xml</view:mlvalue>
+                        </cm:title>
+                        <cm:modified>2011-05-02T11:23:15.609+02:00</cm:modified>
+                        <cm:author>
+                          <view:value view:isNull="true"></view:value>
+                        </cm:author>
+                        <sys:node-uuid>660c5e31-00ae-4882-a8b4-c6d5b88ad07b</sys:node-uuid>
+                        <app:editInline>true</app:editInline>
+                        <cm:created>2011-05-02T11:23:15.609+02:00</cm:created>
+                        <sys:store-protocol>workspace</sys:store-protocol>
+                        <cm:description>
+                          <view:value view:isNull="true"></view:value>
+                        </cm:description>
+                        <cm:creator>admin</cm:creator>
+                        <cm:modifier>admin</cm:modifier>
+                      </view:properties>
+                    </cm:content>
+                  </cm:contains>
+                </view:associations>
+              </cm:folder>
+            </cm:contains>
+          </view:associations>
+        </cm:folder>
+      </cm:contains>
+    </view:associations>
+  </cm:folder>
+</view:view>
