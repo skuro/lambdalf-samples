@@ -61,7 +61,6 @@
 	</pluginRepositories>
 	<properties>
 		<module.log.level>debug</module.log.level>
-		<lambdalf.version>1.0-SNAPSHOT</lambdalf.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -140,7 +139,7 @@
 			<resource>
 				<filtering>true</filtering>
 				<directory>src/main/config</directory>
-				<targetPath>alfresco/module/it.sk.alfresco.alfrescobox</targetPath>
+				<targetPath>alfresco/module/${project.groupId}.${project.artifactId}</targetPath>
 				<excludes>
 					<exclude>**README-*</exclude>
 				</excludes>

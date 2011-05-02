@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<model name="sk:alfrescoboxModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+<model name="abx:alfrescobox" xmlns="http://www.alfresco.org/model/dictionary/1.0">
 
 	<description>Content Model for AlfrescoBox</description>
 	<author>Carlo Sciolla</author>

@@ -38,6 +38,33 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>it.sk.spring.surf.clojure</groupId>
+			<artifactId>spring-webscripts-addon-clojure</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.extensions.surf</groupId>
+					<artifactId>spring-surf</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.extensions.surf</groupId>
+					<artifactId>spring-surf-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.extensions.surf</groupId>
+					<artifactId>spring-surf-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.extensions.surf</groupId>
+					<artifactId>spring-surf-core-configservice</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.extensions.surf</groupId>
+					<artifactId>spring-webscripts</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
 			<groupId>it.sk.alfresco</groupId>
 			<artifactId>lambdalf</artifactId>
 			<version>1.0-SNAPSHOT</version>
@@ -54,6 +81,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -113,7 +141,7 @@
 						<includes>
 							<include>jetty-env.xml</include>
 						</includes>
-						<targetPath>${project.build.directory}/${build.finalName}/WEB-INF</targetPath>
+						<targetPath>${project.build.directory}/${project.build.finalName}/WEB-INF</targetPath>
 						<filtering>true</filtering>
 					</resource>
 					<resource>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Download a file Dropbox-like</shortname>
+  <description>Download a file without authentication using a public ticket</description>
+  <url>/abx/{ticket}</url>
+  <authentication>none</authentication>
+</webscript>
