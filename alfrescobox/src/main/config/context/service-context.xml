@@ -36,9 +36,15 @@
 					<prop key="path">
 						/${spaces.company_home.childname}/${spaces.dictionary.childname}/cm:webscripts
 					</prop>
-					<prop key="location">alfresco/module/${project.groupId}.${project.artifactId}/bootstrap/webscripts.xml</prop>
+					<prop key="location">
+						alfresco/module/${project.groupId}.${project.artifactId}/bootstrap/webscripts.xml
+					</prop>
 				</props>
 			</list>
 		</property>
+	</bean>
+
+	<bean id="bootstrap_behaviors" class="it.sk.alfresco.clojure.NamespaceBootstrap" init-method="init">
+		<property name="ns" value="alfrescobox" />
 	</bean>
 </beans>

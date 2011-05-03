@@ -9,7 +9,7 @@
 
 	<config evaluator="string-compare" condition="Action Wizards">
 		<aspects>
-			<aspect name="abx:downloadable"/>
+			<aspect name="abx:downloadable" display-label="Downloadable" />
 		</aspects>
 	</config>
 

@@ -17,15 +17,9 @@
     <view:properties>
       <app:icon>space-icon-default</app:icon>
       <cm:name>it</cm:name>
-      <sys:node-dbid>555</sys:node-dbid>
-      <sys:store-identifier>SpacesStore</sys:store-identifier>
       <cm:title>
         <view:mlvalue view:locale="en_US"></view:mlvalue>
       </cm:title>
-      <cm:modified>2011-05-02T11:22:00.320+02:00</cm:modified>
-      <sys:node-uuid>47643de9-89e9-4fdc-9929-ef0edad6fe89</sys:node-uuid>
-      <cm:created>2011-05-02T11:22:00.320+02:00</cm:created>
-      <sys:store-protocol>workspace</sys:store-protocol>
       <cm:creator>admin</cm:creator>
       <cm:description>
         <view:mlvalue view:locale="en_US"></view:mlvalue>
@@ -50,10 +44,6 @@
             <cm:title>
               <view:mlvalue view:locale="en_US"></view:mlvalue>
             </cm:title>
-            <cm:modified>2011-05-02T11:22:08.802+02:00</cm:modified>
-            <sys:node-uuid>9e9b1f89-c4d7-40ea-abe3-05d08f09091b</sys:node-uuid>
-            <cm:created>2011-05-02T11:22:08.802+02:00</cm:created>
-            <sys:store-protocol>workspace</sys:store-protocol>
             <cm:creator>admin</cm:creator>
             <cm:description>
               <view:mlvalue view:locale="en_US"></view:mlvalue>
@@ -71,17 +61,9 @@
                 </view:aspects>
                 <view:acl></view:acl>
                 <view:properties>
-                  <app:icon>space-icon-default</app:icon>
-                  <cm:name>alfrescobox</cm:name>
-                  <sys:node-dbid>557</sys:node-dbid>
-                  <sys:store-identifier>SpacesStore</sys:store-identifier>
                   <cm:title>
                     <view:mlvalue view:locale="en_US"></view:mlvalue>
                   </cm:title>
-                  <cm:modified>2011-05-02T11:22:16.331+02:00</cm:modified>
-                  <sys:node-uuid>a95558f0-3ced-417d-8b4a-d22bd2634c54</sys:node-uuid>
-                  <cm:created>2011-05-02T11:22:16.331+02:00</cm:created>
-                  <sys:store-protocol>workspace</sys:store-protocol>
                   <cm:creator>admin</cm:creator>
                   <cm:description>
                     <view:mlvalue view:locale="en_US"></view:mlvalue>
@@ -101,20 +83,14 @@
                       <view:acl></view:acl>
                       <view:properties>
                         <cm:name>alfrescobox.get.clj</cm:name>
-                        <sys:node-dbid>558</sys:node-dbid>
-                        <sys:store-identifier>SpacesStore</sys:store-identifier>
-                        <cm:content>contentUrl=alfrescobox/content0.txt|mimetype=text/plain|size=391|encoding=UTF-8|locale=en_US_</cm:content>
+                        <cm:content>contentUrl=classpath:alfresco/module/${project.groupId}.${project.artifactId}/webscripts/alfrescobox.get.clj|mimetype=text/plain|size=391|encoding=UTF-8|locale=en_US_</cm:content>
                         <cm:title>
                           <view:mlvalue view:locale="en_US">alfrescobox.get.clj</view:mlvalue>
                         </cm:title>
-                        <cm:modified>2011-05-02T11:23:04.476+02:00</cm:modified>
                         <cm:author>
                           <view:value view:isNull="true"></view:value>
                         </cm:author>
-                        <sys:node-uuid>5ba22bcd-cdde-45dd-b2db-93e1e19de595</sys:node-uuid>
                         <app:editInline>true</app:editInline>
-                        <cm:created>2011-05-02T11:23:04.476+02:00</cm:created>
-                        <sys:store-protocol>workspace</sys:store-protocol>
                         <cm:description>
                           <view:value view:isNull="true"></view:value>
                         </cm:description>
@@ -133,20 +109,14 @@
                       <view:acl></view:acl>
                       <view:properties>
                         <cm:name>alfrescobox.get.desc.xml</cm:name>
-                        <sys:node-dbid>559</sys:node-dbid>
-                        <sys:store-identifier>SpacesStore</sys:store-identifier>
-                        <cm:content>contentUrl=alfrescobox/content1.xml|mimetype=text/xml|size=235|encoding=ISO-8859-1|locale=en_US_</cm:content>
+                        <cm:content>contentUrl=classpath:alfresco/module/${project.groupId}.${project.artifactId}/webscripts/alfrescobox.get.desc.xml|mimetype=text/xml|size=235|encoding=ISO-8859-1|locale=en_US_</cm:content>
                         <cm:title>
                           <view:mlvalue view:locale="en_US">alfrescobox.get.desc.xml</view:mlvalue>
                         </cm:title>
-                        <cm:modified>2011-05-02T11:23:15.609+02:00</cm:modified>
                         <cm:author>
                           <view:value view:isNull="true"></view:value>
                         </cm:author>
-                        <sys:node-uuid>660c5e31-00ae-4882-a8b4-c6d5b88ad07b</sys:node-uuid>
                         <app:editInline>true</app:editInline>
-                        <cm:created>2011-05-02T11:23:15.609+02:00</cm:created>
-                        <sys:store-protocol>workspace</sys:store-protocol>
                         <cm:description>
                           <view:value view:isNull="true"></view:value>
                         </cm:description>
