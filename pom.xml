@@ -11,7 +11,7 @@
 	<name>Alfresco with a Clojure taste -- Parent project</name>
 	<description>
 		Wouldn't it be awesome if you could write Clojure only Alfresco customization?
-		This is the parent project for some sample projects that use Clojure as the main
+		This is the parent project for some sample projects that use Clojure as the one and only
 		implementation language.
 	</description>
 
@@ -19,6 +19,20 @@
 		<name>Carlo Sciolla</name>
 		<url>http://skuro.tk</url>
 	</organization>
+
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/skuro/lambdalf-samples.git</connection>
+		<developerConnection>scm:git:git://github.com/skuro/lambdalf-samples.git</developerConnection>
+		<url>http://github.com/skuro/lambdalf-samples</url>
+	</scm>
 
 	<modules>
 		<module>alfrescobox</module>
