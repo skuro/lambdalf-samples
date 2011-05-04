@@ -5,5 +5,5 @@ As part of the onling effort to provide a Clojure façade to the Alfresco Founda
 
 For more information you can visit:
 
-* (lambdalf)[https://github.com/skuro/lambdalf]
-* my personal (blog)[http://skuro.tk]
+* [lambdalf](https://github.com/skuro/lambdalf)
+* my personal [blog](http://skuro.tk)
