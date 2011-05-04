@@ -44,8 +44,5 @@
 		</property>
 	</bean>
 
-	<bean id="bootstrap_behaviors" class="it.sk.alfresco.clojure.NamespaceBootstrap" init-method="init">
-		<property name="ns" value="alfrescobox" />
-		<property name="clojureInit" value="init" />
-	</bean>
+	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot" />
 </beans>

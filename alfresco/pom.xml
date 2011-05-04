@@ -175,6 +175,25 @@
 							</dependency>
 						</dependencies>
 					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>unpack-amps</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>unpack-dependencies</goal>
+								</goals>
+								<configuration>
+									<includeTypes>amp</includeTypes>
+									<outputDirectory>${project.build.directory}/${project.build.finalName}
+									</outputDirectory>
+									<excludes>META*</excludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>

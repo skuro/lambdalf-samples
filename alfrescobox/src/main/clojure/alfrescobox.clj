@@ -26,8 +26,9 @@
   (n/set-properties! node "abx:ticket" (gen-ticket)))
 
 (gen-class :name  alfrescobox.Startup
-           :prefix "abx-")
+           :prefix "abx-"
+           :methods [[boot [] void]])
 
-(defn abx-init
-  []
+(defn abx-boot
+  [this]
   (b/on-add-aspect! (m/qname "abx:downloadable") downloadable-aspect))
