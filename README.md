@@ -5,9 +5,13 @@ As part of the onling effort to provide a Clojure façade to the Alfresco Founda
 
 ===============================
 
-Currently available
+Current samples
+===============
 
 - [alfrescobox](https://github.com/skuro/lambdalf-samples/tree/master/alfrescobox) -- a DropBox like feature for Alfresco
+
+
+===============================
 
 For more information you can visit:
 
