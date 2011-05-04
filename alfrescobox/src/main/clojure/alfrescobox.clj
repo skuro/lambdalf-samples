@@ -1,7 +1,7 @@
 (ns alfrescobox
   (:require [alfresco.behave :as b]
-  			[alfresco.model :as m]
-  			[alfresco.nodes :as n]))
+            [alfresco.model :as m]
+            [alfresco.nodes :as n]))
 
 (def *ticket-size* (atom 25 :validator number?))
 
@@ -25,6 +25,9 @@
   [node qname]
   (n/set-properties! node "abx:ticket" (gen-ticket)))
 
-(defn init
+(gen-class :name  alfrescobox.Startup
+           :prefix "abx-")
+
+(defn abx-init
   []
   (b/on-add-aspect! (m/qname "abx:downloadable") downloadable-aspect))
