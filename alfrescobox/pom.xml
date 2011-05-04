@@ -196,6 +196,7 @@
 				<directory>target/clj</directory>
 				<includes>
 					<include>alfrescobox*</include>
+					<include>alfrescobox/*</include>
 				</includes>
 			</resource>
 		</resources>
