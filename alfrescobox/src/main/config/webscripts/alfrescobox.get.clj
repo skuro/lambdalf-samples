@@ -1,6 +1,4 @@
-(comment
-  ;; NOTE: ns declaration is useless for Clojure web scripts
-  (ns alfrescobox))
+;; ns forms are currently useless
 
 (require '[spring.surf.webscript :as w]
          '[alfresco.auth :as a]
@@ -10,8 +8,14 @@
 (import '[spring.surf.webscript WebScript])
 
 (deftype AlfrescoboxWebScript
+  []
   WebScript
-  (run [this model]
-       (let [nodes (a/as-admin (s/query "+ASPECT:\"abx:downloadable\" +@abx\:ticket:\"wtf\""))
+  (run [this in out model]
+       (let [ticket (:ticket (w/template-args model))
+             query (str "+ASPECT:\"abx:downloadable\" "
+                        "+@abx\\:ticket:\"" ticket "\"")
+             nodes (a/as-admin (s/query query))
              node (first nodes)]
          (w/return model {:contentNode (c/c2j node)}))))
+
+(AlfrescoboxWebScript.)
