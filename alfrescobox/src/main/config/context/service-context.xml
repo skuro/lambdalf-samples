@@ -23,29 +23,6 @@
 		</property>
 	</bean>
 
-	<bean id="alfrescobox_bootstrap_webscripts" class="org.alfresco.repo.module.ImporterModuleComponent"
-		  parent="module.baseComponent">
-		<property name="moduleId" value="${project.groupId}.${project.artifactId}"/>
-		<property name="name" value="alfrescobox_bootstrap_webscripts"/>
-		<property name="description" value="Install alfrescobox web scripts into the repository"/>
-		<property name="sinceVersion" value="1.0"/>
-		<property name="appliesFromVersion" value="1.0"/>
-		<!-- Data properties -->
-		<property name="importer" ref="spacesBootstrap"/>
-		<property name="bootstrapViews">
-			<list>
-				<props>
-					<prop key="path">
-						/${spaces.company_home.childname}/${spaces.dictionary.childname}/cm:webscripts
-					</prop>
-					<prop key="location">
-						alfresco/module/${project.groupId}.${project.artifactId}/bootstrap/webscripts.xml
-					</prop>
-				</props>
-			</list>
-		</property>
-	</bean>
-
 	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot" />
 
 	<!--  Abstract Content Streaming Web Script -->
