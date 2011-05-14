@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
@@ -14,7 +14,10 @@
 	</bean>
 
 	<bean id="${project.artifactId}_configBootstrap" class="org.alfresco.web.config.WebClientConfigBootstrap"
-		  init-method="init">
+		  init-method="register">
+		<property name="configService">
+			<ref bean="webClientConfigService"/>
+		</property>
 		<property name="configs">
 			<list>
 				<value>classpath:alfresco/module/${project.groupId}.${project.artifactId}/ui/web-client-custom.xml
@@ -23,13 +26,5 @@
 		</property>
 	</bean>
 
-	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot" />
-
-	<!--  Abstract Content Streaming Web Script -->
-   <bean id="webscript.org.alfresco.repository.content.stream.clj" class="alfresco.interop.StreamContent" parent="webscript" scope="prototype">
-      <property name="permissionService" ref="PermissionService" />
-      <property name="nodeService" ref="NodeService" />
-      <property name="contentService" ref="ContentService" />
-      <property name="mimetypeService" ref="MimetypeService" />
-   </bean>
+	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot"/>
 </beans>

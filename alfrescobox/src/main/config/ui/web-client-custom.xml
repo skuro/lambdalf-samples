@@ -2,14 +2,13 @@
 
 	<config evaluator="aspect-name" condition="abx:downloadable">
 		<property-sheet>
-			<separator name="sep" display-label-id="aspectSep" component-generator="HeaderSeparatorGenerator"/>
-			<show-property name="abx:ticket" read-only="false"/>
+			<show-property name="abx:ticket" />
 		</property-sheet>
 	</config>
 
 	<config evaluator="string-compare" condition="Action Wizards">
 		<aspects>
-			<aspect name="abx:downloadable" display-label="Downloadable" />
+			<aspect name="abx:downloadable" />
 		</aspects>
 	</config>
 
