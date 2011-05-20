@@ -39,4 +39,12 @@
   []
   Action
   (needs-params [this]
-                nil))
+                [(act/param {:name "to"
+                             :type "d:text"
+                             :mandatory true
+                             :multi true
+                             :label "email-ticket"})])
+  
+  (exec [this action node]
+        (println "Recipients are:")
+        (map println (seq (.getParameterValue action "to")))))
