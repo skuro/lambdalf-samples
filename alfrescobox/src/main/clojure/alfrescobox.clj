@@ -1,7 +1,9 @@
 (ns alfrescobox
   (:require [alfresco.behave :as b]
             [alfresco.model :as m]
-            [alfresco.nodes :as n]))
+            [alfresco.nodes :as n]
+            [alfresco.actions :as act])
+  (:import [alfresco.actions Action]))
 
 (def *ticket-size* (atom 25 :validator number?))
 
@@ -32,3 +34,9 @@
 (defn abx-boot
   [this]
   (b/on-add-aspect! (m/qname "abx:downloadable") downloadable-aspect))
+
+(defrecord EmailTicketAction
+  []
+  Action
+  (needs-params [this]
+                nil))

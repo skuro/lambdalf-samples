@@ -178,6 +178,7 @@
 				<directory>target/clj</directory>
 				<includes>
 					<include>alfrescobox/Startup.class</include>
+					<include>alfrescobox/EmailTicketAction.class</include>
 				</includes>
 			</resource>
 		</resources>

@@ -13,7 +13,7 @@
 		</property>
 	</bean>
 
-	<bean id="${project.artifactId}_configBootstrap" class="org.alfresco.web.config.WebClientConfigBootstrap"
+	<bean id="${project.artifactId}.config.Bootstrap" class="org.alfresco.web.config.WebClientConfigBootstrap"
 		  init-method="register">
 		<property name="configService">
 			<ref bean="webClientConfigService"/>
@@ -24,6 +24,12 @@
 				</value>
 			</list>
 		</property>
+	</bean>
+
+	<bean id="email-ticket" class="alfresco.actions.ActionRegistrar" parent="action-executer">
+		<constructor-arg>
+			<value>alfrescobox.EmailTicketAction</value>
+		</constructor-arg>
 	</bean>
 
 	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot"/>
