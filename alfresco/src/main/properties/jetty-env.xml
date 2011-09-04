@@ -5,11 +5,10 @@
 		<Arg></Arg>
 		<Arg>jdbc/dataSource</Arg>
 		<Arg>
-			<New class="org.apache.commons.dbcp.BasicDataSource">
-				<Set name="driverClassName">org.gjt.mm.mysql.Driver</Set>
-				<Set name="url">${db.url}</Set>
-				<Set name="username">${db.username}</Set>
-				<Set name="password">${db.password}</Set>
+			<New class="org.h2.jdbcx.JdbcDataSource">
+				<Set name="URL">${db.url}</Set>
+				<Set name="User">${db.username}</Set>
+				<Set name="Password">${db.password}</Set>
 			</New>
 		</Arg>
 	</New>

@@ -53,8 +53,8 @@
 		<compiler.source>1.6</compiler.source>
 		<compiler.target>1.6</compiler.target>
 		<compliance.level>1.6</compliance.level>
-		<alfresco.version>3.4.0</alfresco.version>
-		<alfresco.classifier>enterprise</alfresco.classifier>
+		<alfresco.version>3.4.a</alfresco.version>
+		<alfresco.classifier>community</alfresco.classifier>
 		<lambdalf.version>1.0-SNAPSHOT</lambdalf.version>
 		<clojure.version>1.2.1</clojure.version>
 	</properties>
