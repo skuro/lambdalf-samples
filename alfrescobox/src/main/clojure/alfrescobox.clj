@@ -19,24 +19,20 @@
 (defn rand-str [length]
   (apply str (take length (repeatedly rand-char))))
 
-(defn gen-ticket
-  []
+(defn gen-ticket []
   (rand-str @*ticket-size*))
 
-(defn downloadable-aspect
-  [node qname]
+(defn downloadable-aspect [node qname]
   (n/set-properties! node "abx:ticket" (gen-ticket)))
 
 (gen-class :name  alfrescobox.Startup
            :prefix "abx-"
            :methods [[boot [] void]])
 
-(defn abx-boot
-  [this]
+(defn abx-boot [this]
   (b/on-add-aspect! (m/qname "abx:downloadable") downloadable-aspect))
 
-(defrecord EmailTicketAction
-  []
+(defrecord EmailTicketAction []
   Action
   (needs-params [this]
                 [(act/param {:name "to"
