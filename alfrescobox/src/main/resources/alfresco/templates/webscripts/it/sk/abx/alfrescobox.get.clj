@@ -1,9 +1,8 @@
-;; ns forms are currently useless
-
-(require '[spring.surf.webscript :as w]
-         '[alfresco.auth :as a]
-         '[alfresco.search :as s]
-         '[alfresco.core :as c])
+(ns alfrescobox.webscript
+  (:require [spring.surf.webscript :as w]
+            [alfresco.auth :as a]
+            [alfresco.search :as s]
+            [alfresco.core :as c]))
 
 (import '[spring.surf.webscript WebScript])
 
