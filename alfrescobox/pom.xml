@@ -81,8 +81,7 @@
 		<dependency>
 			<groupId>acegisecurity</groupId>
 			<artifactId>acegi-security</artifactId>
-			<version>0.8.2</version>
-			<classifier>alfresco</classifier>
+			<version>0.8.2-patched</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
