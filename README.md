@@ -8,8 +8,7 @@ Current samples
 
 - [alfrescobox](https://github.com/skuro/lambdalf-samples/tree/master/alfrescobox) -- a DropBox like feature for Alfresco
 
-
-===============================
+--------------------
 
 For more information you can visit:
 
