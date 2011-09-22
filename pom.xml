@@ -68,10 +68,6 @@
 			<id>Alfresco Public Snapshot Repository</id>
 			<url>http://maven.alfresco.com/nexus/content/groups/public-snapshots/</url>
 		</repository>
-		<repository>
-			<id>sose-private-releases</id>
-			<url>https://nexus.sourcesense.com/nexus/content/repositories/private/</url>
-		</repository>
 	</repositories>
 
 	<pluginRepositories>
