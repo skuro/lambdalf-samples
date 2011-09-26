@@ -78,6 +78,11 @@
 			<artifactId>alfresco-data-model</artifactId>
 			<classifier>${alfresco.classifier}</classifier>
 		</dependency>
+        <dependency>
+            <groupId>org.alfresco</groupId>
+            <artifactId>alfresco-web-client</artifactId>
+            <classifier>${alfresco.classifier}</classifier>
+        </dependency>
 		<dependency>
 			<groupId>acegisecurity</groupId>
 			<artifactId>acegi-security</artifactId>

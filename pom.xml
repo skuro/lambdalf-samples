@@ -91,6 +91,12 @@
 				<version>${alfresco.version}</version>
 				<classifier>${alfresco.classifier}</classifier>
 			</dependency>
+            <dependency>
+				<groupId>org.alfresco</groupId>
+				<artifactId>alfresco-web-client</artifactId>
+				<version>${alfresco.version}</version>
+				<classifier>${alfresco.classifier}</classifier>
+			</dependency>
 			<dependency>
 				<groupId>org.alfresco</groupId>
 				<artifactId>alfresco-data-model</artifactId>
