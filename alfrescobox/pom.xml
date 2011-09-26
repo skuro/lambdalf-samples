@@ -114,6 +114,7 @@
 						<configuration>
 							<namespaces>
 								<namespace>alfrescobox</namespace>
+                                <namespace>alfrescobox.boot</namespace>
 							</namespaces>
 							<compileDeclaredNamespaceOnly>true</compileDeclaredNamespaceOnly>
 							<outputDirectory>${project.basedir}/target/clj</outputDirectory>
