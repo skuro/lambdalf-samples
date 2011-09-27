@@ -1,6 +1,7 @@
 (ns alfrescobox
   (:require [alfresco.actions :as a])
-  (:import [alfresco.actions Action]))
+  (:import [alfresco.actions Action]
+           [java.util HashMap]))
 
 (defn- email-action-impl [_ action node]
   (println "Recipients are:")
@@ -19,3 +20,28 @@
     
     (exec [this action node]
       (email-action-impl this action node)))
+
+;; AOT-compile to enable JSF/Spring interop
+(gen-class :name alfrescobox.actions.TicketActionHandler
+           :extends org.alfresco.web.bean.actions.handlers.BaseActionHandler
+           :prefix "tkt-")
+
+(defn tkt-getJSPPath
+  "Routes to the correct JSP"
+  []
+  "/jsp/alfrescobox-action.jsp")
+
+(defn tkt-prepareForSave
+  "Copies user provided params into to-be-saved props"
+  [^HashMap act-props ^HashMap repo-props]
+  (. repo-props put "tkt-recipients" (. get act-props "tkt-recipients")))
+
+(defn tkt-prepareForEdit
+  "Initializes the action form with the currently stored props"
+  [^HashMap act-props ^HashMap repo-props]
+  (. act-props put "tkt-recipients" (. repo-props get "tkt-recipients")))
+
+(defn tkt-generateSummary
+  [context wizard act-props]
+  (println "test")
+  "TBD")

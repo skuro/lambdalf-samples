@@ -15,6 +15,9 @@
 
 	<bean id="${project.artifactId}.config.Bootstrap" class="org.alfresco.web.config.WebClientConfigBootstrap"
 		  init-method="register">
+        <property name="configService">
+            <ref bean="webClientConfigService" />
+        </property>
 		<property name="configs">
 			<list>
 				<value>classpath:alfresco/module/${project.groupId}.${project.artifactId}/ui/web-client-custom.xml

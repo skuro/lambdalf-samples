@@ -1,15 +1,21 @@
 <alfresco-config>
 
-	<config evaluator="aspect-name" condition="abx:downloadable">
-		<property-sheet>
-			<show-property name="abx:ticket" />
-		</property-sheet>
-	</config>
+    <config evaluator="aspect-name" condition="abx:downloadable">
+        <property-sheet>
+            <show-property name="abx:ticket"/>
+        </property-sheet>
+    </config>
 
-	<config evaluator="string-compare" condition="Action Wizards">
-		<aspects>
-			<aspect name="abx:downloadable" />
-		</aspects>
-	</config>
+    <config evaluator="string-compare" condition="Action Wizards">
+        <aspects>
+            <aspect name="abx:downloadable"/>
+        </aspects>
+    </config>
+
+    <config evaluator="string-compare" condition="Action Wizards">
+        <action-handlers>
+            <handler name="email-ticket" class="alfrescobox.actions.TicketActionHandler"/>
+        </action-handlers>
+    </config>
 
 </alfresco-config>

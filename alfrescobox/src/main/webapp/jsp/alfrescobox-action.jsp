@@ -8,14 +8,14 @@
 <%@ page isELIgnored="false" %>
 <%@ page import="org.alfresco.web.ui.common.PanelGenerator" %>
 
-<r:page titleId="title_action_add_feature">
+<r:page titleId="title_action_send_ticket">
 
 <f:view>
    
    <%-- load a bundle of properties with I18N strings --%>
    <r:loadBundle var="msg"/>
    
-   <h:form acceptcharset="UTF-8" id="add-features-action">
+   <h:form acceptcharset="UTF-8" id="send-ticket-action">
    
    <%-- Main outer table --%>
    <table cellspacing="0" cellpadding="2" width="100%">
@@ -87,11 +87,9 @@
                                  </tr>
                                  <tr><td colspan="2" class="paddingRow"></td></tr>
                                  <tr>
-                                    <td><nobr><h:outputText value="#{msg.select_feature}"/></nobr></td>
+                                    <td><nobr><h:outputText value="#{msg.add_recipient}"/></nobr></td>
                                     <td width="90%">
-                                       <h:selectOneMenu value="#{WizardManager.bean.actionProperties.aspect}">
-                                          <f:selectItems value="#{WizardManager.bean.addableAspects}" />
-                                       </h:selectOneMenu>
+                                        <h:inputTextarea rows="5" value="#{WizardManager.bean.actionProperties.recipients}"></h:inputTextarea>
                                     </td>
                                  </tr>
                                  <tr><td class="paddingRow"></td></tr>
