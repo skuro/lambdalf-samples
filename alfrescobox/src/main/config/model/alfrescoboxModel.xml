@@ -17,10 +17,20 @@
 	
 	<aspects>
 		<aspect name="abx:downloadable">
+            <title>Alfrescobox Download</title>
+            <description>Enables a content to be publicly downloaded using a ticket</description>
 			<properties>
 				<property name="abx:ticket">
+                    <title>Alfrescobox Ticket</title>
+                    <description>Allows public downloads of the node</description>
 					<type>d:text</type>
 				</property>
+                <property name="abx:recipients">
+                    <title>Alfrescobox Recipients</title>
+                    <description>Automatically sends emails containing the public download URL</description>
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                </property>
 			</properties>
 		</aspect>
 	</aspects>
