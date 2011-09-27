@@ -3,7 +3,7 @@
   (:import [alfresco.actions Action]
            [java.util HashMap]))
 
-(defn- email-action-impl [_ action node]
+(defn email-action-impl [_ action node]
   (println "Recipients are:")
   (println (str "xxxx" (bean action)))
   (map println (seq (.getParameterValue action "to"))))
