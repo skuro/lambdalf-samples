@@ -33,4 +33,13 @@
 	</bean>
 
 	<bean id="bootstrap_alfrescobox" class="alfrescobox.Startup" init-method="boot"/>
+
+    <bean id="bootstrap_namespaces" parent="initClojureNs">
+        <property name="namespaces">
+            <list>
+                <value>/alfrescobox</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>
