@@ -83,24 +83,28 @@
 				<artifactId>alfresco-core</artifactId>
 				<version>${alfresco.version}</version>
 				<classifier>${alfresco.classifier}</classifier>
+                <scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.alfresco</groupId>
 				<artifactId>alfresco-repository</artifactId>
 				<version>${alfresco.version}</version>
 				<classifier>${alfresco.classifier}</classifier>
+                <scope>provided</scope>
 			</dependency>
             <dependency>
 				<groupId>org.alfresco</groupId>
 				<artifactId>alfresco-web-client</artifactId>
 				<version>${alfresco.version}</version>
 				<classifier>${alfresco.classifier}</classifier>
+                <scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.alfresco</groupId>
 				<artifactId>alfresco-data-model</artifactId>
 				<version>${alfresco.version}</version>
 				<classifier>${alfresco.classifier}</classifier>
+                <scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.clojure</groupId>

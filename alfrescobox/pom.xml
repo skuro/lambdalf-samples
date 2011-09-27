@@ -92,11 +92,16 @@
         <dependency>
             <groupId>it.sk.alfresco</groupId>
             <artifactId>lambdalf-lib</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.clojure</groupId>
             <artifactId>clojure</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.clojure</groupId>
+            <artifactId>tools.logging</artifactId>
+            <version>0.2.0</version>
         </dependency>
         <dependency>
             <groupId>jstl</groupId>
@@ -202,6 +207,7 @@
                 <includes>
                     <include>alfrescobox/Startup.class</include>
                     <include>alfrescobox/EmailTicketAction.class</include>
+                    <include>alfrescobox*.class</include>
                 </includes>
             </resource>
         </resources>
